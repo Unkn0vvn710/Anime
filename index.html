@@ -58,6 +58,10 @@
       cursor: pointer;
       overflow: hidden;
       transition: transform 0.2s;
+      text-decoration: none;
+      color: #222;
+      display: block;
+      text-align: center;
     }
     .anime-card:hover {
       transform: scale(1.05);
@@ -73,52 +77,6 @@
     .anime-card h3 {
       margin: 10px;
       font-size: 1.2em;
-      text-align: center;
-    }
-
-    /* Lista de capítulos - inicialmente oculta */
-    .episodes-list {
-      max-width: 700px;
-      margin: 0 auto 50px;
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      display: none;
-    }
-
-    .episodes-list.active {
-      display: block;
-    }
-
-    .episode {
-      margin-bottom: 25px;
-    }
-
-    .episode h4 {
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    video {
-      width: 100%;
-      max-height: 400px;
-      border-radius: 8px;
-      background-color: black;
-    }
-
-    /* Botón para cerrar la lista de capítulos */
-    .close-btn {
-      background: #222;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1em;
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
     }
 
     /* Responsive */
@@ -130,10 +88,6 @@
 
       .anime-card {
         width: 90%;
-      }
-
-      video {
-        max-height: 250px;
       }
     }
   </style>
@@ -155,27 +109,19 @@
   <main>
 
     <section class="gallery" id="animeGallery">
-      <!-- Aquí van las tarjetas de anime -->
-      <div class="anime-card" data-anime="anime1">
+      <!-- Cada anime es un link a su propia página -->
+      <a class="anime-card" href="anime1.html">
         <img src="https://via.placeholder.com/200x280?text=Anime+1" alt="Anime 1">
         <h3>Anime 1</h3>
-      </div>
-      <div class="anime-card" data-anime="anime2">
+      </a>
+      <a class="anime-card" href="anime2.html">
         <img src="https://via.placeholder.com/200x280?text=Anime+2" alt="Anime 2">
         <h3>Anime 2</h3>
-      </div>
-      <div class="anime-card" data-anime="anime3">
+      </a>
+      <a class="anime-card" href="anime3.html">
         <img src="https://via.placeholder.com/200x280?text=Anime+3" alt="Anime 3">
         <h3>Anime 3</h3>
-      </div>
-      <!-- Agrega más animes acá -->
-    </section>
-
-    <section class="episodes-list" id="episodesList">
-      <button class="close-btn" id="closeEpisodes">Cerrar capítulos</button>
-      <div id="episodesContainer">
-        <!-- Aquí se cargan los capítulos dinámicamente -->
-      </div>
+      </a>
     </section>
 
   </main>
@@ -183,73 +129,6 @@
   <footer>
     <p>&copy; 2025 - Mi Sitio Web. Todos los derechos reservados.</p>
   </footer>
-
-<script>
-  // Definimos los datos de los animes y sus capítulos
-  const animes = {
-    anime1: {
-      title: "Anime 1",
-      episodes: [
-        {title: "Capítulo 1 - El Comienzo", video: "capitulo1.mp4"},
-        {title: "Capítulo 2 - El Despertar", video: "capitulo2.mp4"},
-      ],
-    },
-    anime2: {
-      title: "Anime 2",
-      episodes: [
-        {title: "Capítulo 1 - Introducción", video: "capitulo1_anime2.mp4"},
-        {title: "Capítulo 2 - La aventura continúa", video: "capitulo2_anime2.mp4"},
-      ],
-    },
-    anime3: {
-      title: "Anime 3",
-      episodes: [
-        {title: "Capítulo 1 - Inicio misterioso", video: "capitulo1_anime3.mp4"},
-      ],
-    },
-  };
-
-  const gallery = document.getElementById("animeGallery");
-  const episodesList = document.getElementById("episodesList");
-  const episodesContainer = document.getElementById("episodesContainer");
-  const closeBtn = document.getElementById("closeEpisodes");
-
-  gallery.addEventListener("click", e => {
-    const card = e.target.closest(".anime-card");
-    if (!card) return;
-
-    const animeKey = card.getAttribute("data-anime");
-    if (!animes[animeKey]) return;
-
-    showEpisodes(animeKey);
-  });
-
-  closeBtn.addEventListener("click", () => {
-    episodesList.classList.remove("active");
-    episodesContainer.innerHTML = "";
-  });
-
-  function showEpisodes(animeKey) {
-    const anime = animes[animeKey];
-    episodesContainer.innerHTML = `<h2>${anime.title} - Capítulos</h2>`;
-
-    anime.episodes.forEach(ep => {
-      const epDiv = document.createElement("div");
-      epDiv.classList.add("episode");
-      epDiv.innerHTML = `
-        <h4>${ep.title}</h4>
-        <video controls>
-          <source src="${ep.video}" type="video/mp4" />
-          Tu navegador no soporta el video.
-        </video>
-      `;
-      episodesContainer.appendChild(epDiv);
-    });
-
-    episodesList.classList.add("active");
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
-</script>
 
 </body>
 </html>
