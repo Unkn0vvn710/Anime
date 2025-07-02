@@ -39,4 +39,131 @@
       padding: 20px;
     }
 
-    .centered-conten
+    .centered-content {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .centered-content h2 {
+      font-size: 24px;
+    }
+
+    .centered-content p {
+      font-size: 16px;
+    }
+
+    .centered-content img {
+      margin-top: 10px;
+      width: 300px;
+      max-width: 90%;
+      height: auto;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .anime-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .episode {
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .episode h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      background-color: black;
+      border-radius: 8px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .centered-content h2 {
+        font-size: 18px;
+      }
+
+      .centered-content p {
+        font-size: 14px;
+      }
+
+      .centered-content img {
+        width: 200px;
+      }
+
+      .episode h3 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Unknown</h1>
+    <nav>
+      <ul>
+        <li><a href="https://unkn0vvn710.github.io/UnknownScan/">Inicio</a></li>
+        <li><a href="#">Anime</a></li>
+        <li><a href="https://unkn0vvn710.github.io/Mangas/">Proyectos</a></li>
+        <li><a href="https://unkn0vvn710.github.io/links/">Contacto</a></li> 
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="centered-content">
+      <h2>(En proceso)</h2>
+      <p></p>
+      <img src="" alt="logo">
+    </section>
+
+    <!-- SECCIÓN DE CAPÍTULOS DE ANIME -->
+    <section class="anime-section">
+      <div class="episode">
+        <h3>Capítulo 1 - El Comienzo</h3>
+        <video controls>
+          <source src="capitulo1.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+
+      <div class="episode">
+        <h3>Capítulo 2 - El Despertar</h3>
+        <video controls>
+          <source src="capitulo2.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
