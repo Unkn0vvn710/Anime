@@ -11,50 +11,44 @@
       padding: 0 20px;
       color: #222;
     }
-
     header, footer {
       text-align: center;
       background-color: #222;
       color: white;
       padding: 15px 0;
     }
-
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0 auto 20px;
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
       flex-wrap: wrap;
       max-width: 900px;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
     }
-
     h1 {
       margin-bottom: 10px;
     }
-
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       max-width: 900px;
       margin: 0 auto 50px;
     }
-
     .anime-card {
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      width: 200px;
+      width: 180px;
       cursor: pointer;
       overflow: hidden;
       transition: transform 0.2s;
@@ -66,26 +60,21 @@
     .anime-card:hover {
       transform: scale(1.05);
     }
-
     .anime-card img {
       width: 100%;
       display: block;
-      height: 280px;
+      height: 260px;
       object-fit: cover;
     }
-
     .anime-card h3 {
       margin: 10px;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
-
-    /* Responsive */
     @media (max-width: 600px) {
       .gallery {
         flex-direction: column;
         align-items: center;
       }
-
       .anime-card {
         width: 90%;
       }
@@ -94,41 +83,68 @@
 </head>
 <body>
 
-  <header>
-    <h1>Unknown Scan - Galería de Animes</h1>
-    <nav>
-      <ul>
-        <li><a href="https://unkn0vvn710.github.io/UnknownScan/">Inicio</a></li>
-        <li><a href="#">Anime</a></li>
-        <li><a href="https://unkn0vvn710.github.io/Mangas/">Proyectos</a></li>
-        <li><a href="https://unkn0vvn710.github.io/links/">Contacto</a></li> 
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Unknown Scan - Galería de Animes</h1>
+  <nav>
+    <ul>
+      <li><a href="https://unkn0vvn710.github.io/UnknownScan/">Inicio</a></li>
+      <li><a href="#">Anime</a></li>
+      <li><a href="https://unkn0vvn710.github.io/Mangas/">Proyectos</a></li>
+      <li><a href="https://unkn0vvn710.github.io/links/">Contacto</a></li> 
+    </ul>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section class="gallery" id="animeGallery">
+    <!-- 10 animes -->
+    <a class="anime-card" href="anime1.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+1" alt="Anime 1">
+      <h3>Anime 1</h3>
+    </a>
+    <a class="anime-card" href="anime2.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+2" alt="Anime 2">
+      <h3>Anime 2</h3>
+    </a>
+    <a class="anime-card" href="anime3.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+3" alt="Anime 3">
+      <h3>Anime 3</h3>
+    </a>
+    <a class="anime-card" href="anime4.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+4" alt="Anime 4">
+      <h3>Anime 4</h3>
+    </a>
+    <a class="anime-card" href="anime5.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+5" alt="Anime 5">
+      <h3>Anime 5</h3>
+    </a>
+    <a class="anime-card" href="anime6.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+6" alt="Anime 6">
+      <h3>Anime 6</h3>
+    </a>
+    <a class="anime-card" href="anime7.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+7" alt="Anime 7">
+      <h3>Anime 7</h3>
+    </a>
+    <a class="anime-card" href="anime8.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+8" alt="Anime 8">
+      <h3>Anime 8</h3>
+    </a>
+    <a class="anime-card" href="anime9.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+9" alt="Anime 9">
+      <h3>Anime 9</h3>
+    </a>
+    <a class="anime-card" href="anime10.html">
+      <img src="https://via.placeholder.com/180x260?text=Anime+10" alt="Anime 10">
+      <h3>Anime 10</h3>
+    </a>
+  </section>
+</main>
 
-    <section class="gallery" id="animeGallery">
-      <!-- Cada anime es un link a su propia página -->
-      <a class="anime-card" href="anime1.html">
-        <img src="https://via.placeholder.com/200x280?text=Anime+1" alt="Anime 1">
-        <h3>Anime 1</h3>
-      </a>
-      <a class="anime-card" href="anime2.html">
-        <img src="https://via.placeholder.com/200x280?text=Anime+2" alt="Anime 2">
-        <h3>Anime 2</h3>
-      </a>
-      <a class="anime-card" href="anime3.html">
-        <img src="https://via.placeholder.com/200x280?text=Anime+3" alt="Anime 3">
-        <h3>Anime 3</h3>
-      </a>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 - Mi Sitio Web. Todos los derechos reservados.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 - Mi Sitio Web. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
+
